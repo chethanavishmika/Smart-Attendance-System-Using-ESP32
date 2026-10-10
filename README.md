@@ -8,9 +8,9 @@ This project reads unique RFID keycards/tags via SPI communication, validates us
 
 ## 📸 Features
 
-* **Real-time RFID Authentication:** Instant card scanning and UID detection using the MFRC522 SPI interface[cite: 19].
-* **Audio Feedback:** Active/passive buzzer integration to confirm successful scans or alert on unrecognized tags[cite: 19].
-* **Compact Breadboard Layout:** Neat wiring setup connecting peripherals directly to the ESP32 development board[cite: 19].
+* **Real-time RFID Authentication:** Instant card scanning and UID detection using the MFRC522 SPI interface.
+* **Audio Feedback:** Active/passive buzzer integration to confirm successful scans or alert on unrecognized tags.
+* **Compact Breadboard Layout:** Neat wiring setup connecting peripherals directly to the ESP32 development board.
 
 ---
 
@@ -18,10 +18,10 @@ This project reads unique RFID keycards/tags via SPI communication, validates us
 
 | Component | Quantity | Description |
 | :--- | :--- | :--- |
-| **ESP32 Development Board** | 1 | Wi-Fi & Bluetooth microcontroller board[cite: 19] |
-| **RC522 RFID Module** | 1 | 13.56MHz RFID Reader/Writer SPI module[cite: 19] |
-| **Buzzer** | 1 | Audio indicator for scan verification[cite: 19] |
-| **Breadboard & Wires** | - | Jumper cables for pin interconnections[cite: 19] |
+| **ESP32 Development Board** | 1 | Wi-Fi & Bluetooth microcontroller board |
+| **RC522 RFID Module** | 1 | 13.56MHz RFID Reader/Writer SPI module |
+| **Buzzer** | 1 | Audio indicator for scan verification |
+| **Breadboard & Wires** | - | Jumper cables for pin interconnections |
 
 ---
 
