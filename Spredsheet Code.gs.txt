@@ -1,0 +1,33 @@
+// RFID Attendance - Google Apps Script
+// Receives ?name=Student+Name from the ESP32 and adds a row: Name | Date | Time
+
+// 1) Your spreadsheet ID (the long text in the sheet's URL between /d/ and /edit)
+var ss = SpreadsheetApp.openById('YOUR_SPREADSHEET_ID');
+
+// 2) The sheet (tab) name where attendance is saved
+var sheet = ss.getSheetByName('Sheet1');
+
+// 3) TIME ZONE - change this to yours
+//    Sri Lanka = "Asia/Colombo"
+//    Other examples: "Asia/Kolkata", "Asia/Dubai", "Europe/London", "America/New_York"
+var timezone = "Asia/Colombo";
+
+// 4) Date and time formats (change if you like)
+var dateFormat = "dd/MM/yyyy";   // e.g. 10/10/2026
+var timeFormat = "HH:mm:ss";     // 24-hour, e.g. 17:15:30  (use "hh:mm:ss a" for 05:15:30 PM)
+
+function doGet(e) {
+  var name = (e && e.parameter && e.parameter.name) ? e.parameter.name : "";
+
+  if (name === "") {
+    return ContentService.createTextOutput("Error: no name received");
+  }
+
+  var now = new Date();
+  var date = Utilities.formatDate(now, timezone, dateFormat);
+  var time = Utilities.formatDate(now, timezone, timeFormat);
+
+  sheet.appendRow([name, date, time]);
+
+  return ContentService.createTextOutput("OK");
+}
