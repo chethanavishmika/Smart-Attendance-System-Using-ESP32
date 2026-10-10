@@ -44,7 +44,7 @@ This project reads unique RFID keycards/tags via SPI communication, validates us
 
 | Buzzer Pin | ESP32 GPIO Pin | Description |
 | :--- | :--- | :--- |
-| **Positive (+)** | **GPIO 4** | Digital Control Pin |
+| **Positive (+)** | **GPIO 15** | Digital Control Pin |
 | **Negative (-)** | **GND** | Ground Rail |
 
 ---
